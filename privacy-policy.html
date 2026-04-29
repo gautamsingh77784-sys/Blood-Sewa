@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Privacy Policy — Blood Sewa</title>
+  <style>
+    :root {
+      --primary: #CC0000;
+      --primary-light: #fff0f0;
+      --bg: #ffffff;
+      --card: #f9f9f9;
+      --text: #1a1a1a;
+      --muted: #666666;
+      --border: #e5e5e5;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+    }
+
+    /* Header */
+    header {
+      background: var(--primary);
+      color: white;
+      padding: 20px 0;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+    }
+    .header-inner {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 0 20px;
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
+    .logo {
+      width: 42px;
+      height: 42px;
+      background: rgba(255,255,255,0.2);
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 22px;
+    }
+    header h1 { font-size: 20px; font-weight: 800; }
+    header p { font-size: 13px; opacity: 0.85; }
+
+    /* Hero */
+    .hero {
+      background: linear-gradient(135deg, #fff0f0 0%, #fff 100%);
+      border-bottom: 1px solid var(--border);
+      padding: 40px 20px;
+      text-align: center;
+    }
+    .hero h2 {
+      font-size: 28px;
+      font-weight: 800;
+      color: var(--primary);
+      margin-bottom: 8px;
+    }
+    .hero p { color: var(--muted); font-size: 15px; }
+    .badge {
+      display: inline-block;
+      background: var(--primary-light);
+      color: var(--primary);
+      border: 1px solid rgba(204,0,0,0.2);
+      border-radius: 20px;
+      padding: 4px 14px;
+      font-size: 12px;
+      font-weight: 600;
+      margin-top: 12px;
+    }
+
+    /* Main */
+    main {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 40px 20px 80px;
+    }
+
+    /* Section */
+    .section {
+      margin-bottom: 32px;
+      padding-bottom: 32px;
+      border-bottom: 1px solid var(--border);
+    }
+    .section:last-child { border-bottom: none; }
+
+    .section h3 {
+      font-size: 17px;
+      font-weight: 700;
+      color: var(--text);
+      margin-bottom: 12px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .section h3::before {
+      content: '';
+      display: inline-block;
+      width: 4px;
+      height: 18px;
+      background: var(--primary);
+      border-radius: 2px;
+    }
+
+    .section p {
+      color: var(--muted);
+      font-size: 14px;
+      line-height: 1.7;
+      margin-bottom: 10px;
+    }
+
+    ul.bullets {
+      list-style: none;
+      padding: 0;
+      margin-top: 8px;
+    }
+    ul.bullets li {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      color: var(--muted);
+      font-size: 14px;
+      line-height: 1.6;
+      margin-bottom: 8px;
+    }
+    ul.bullets li::before {
+      content: '';
+      display: inline-block;
+      min-width: 7px;
+      height: 7px;
+      background: var(--primary);
+      border-radius: 50%;
+      margin-top: 7px;
+    }
+
+    /* Info card */
+    .info-card {
+      background: var(--primary-light);
+      border: 1px solid rgba(204,0,0,0.15);
+      border-radius: 14px;
+      padding: 20px;
+      margin-bottom: 32px;
+      display: flex;
+      gap: 16px;
+      align-items: flex-start;
+    }
+    .info-card .icon {
+      font-size: 28px;
+      flex-shrink: 0;
+    }
+    .info-card h4 { font-size: 15px; font-weight: 700; color: var(--text); margin-bottom: 4px; }
+    .info-card p { font-size: 13px; color: var(--muted); margin: 0; }
+
+    /* Privacy controls highlight */
+    .controls-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 12px;
+      margin-top: 12px;
+    }
+    .control-item {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 14px;
+    }
+    .control-item .ctrl-title {
+      font-size: 13px;
+      font-weight: 700;
+      color: var(--text);
+      margin-bottom: 4px;
+    }
+    .control-item .ctrl-desc {
+      font-size: 12px;
+      color: var(--muted);
+    }
+
+    /* Footer */
+    footer {
+      background: var(--text);
+      color: rgba(255,255,255,0.7);
+      text-align: center;
+      padding: 30px 20px;
+      font-size: 13px;
+    }
+    footer a { color: var(--primary); text-decoration: none; }
+    footer .footer-logo { font-size: 24px; margin-bottom: 8px; }
+    footer strong { color: white; }
+
+    /* Responsive */
+    @media (max-width: 600px) {
+      .hero h2 { font-size: 22px; }
+      .controls-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <div class="header-inner">
+      <div class="logo">🩸</div>
+      <div>
+        <h1>Blood Sewa</h1>
+        <p>Connecting donors &amp; recipients across India</p>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <div class="hero">
+    <h2>Privacy Policy</h2>
+    <p>How we collect, use, and protect your personal information</p>
+    <span class="badge">Last updated: April 29, 2026</span>
+  </div>
+
+  <!-- Main Content -->
+  <main>
+
+    <!-- Intro card -->
+    <div class="info-card">
+      <div class="icon">🛡️</div>
+      <div>
+        <h4>Your privacy matters to us</h4>
+        <p>Blood Sewa is built to save lives while respecting your privacy. We collect only what is necessary to connect donors with recipients, and you remain in full control of your data at all times.</p>
+      </div>
+    </div>
+
+    <div class="section">
+      <h3>1. Introduction</h3>
+      <p>Blood Sewa ("we", "our", or "us") is committed to protecting your personal information. This Privacy Policy explains how we collect, use, and safeguard your data when you use the Blood Sewa mobile application.</p>
+      <p>By using Blood Sewa, you agree to the collection and use of information in accordance with this policy.</p>
+    </div>
+
+    <div class="section">
+      <h3>2. Information We Collect</h3>
+      <p>We collect the following information when you register and use Blood Sewa:</p>
+      <ul class="bullets">
+        <li>Full name and phone number</li>
+        <li>Email address (optional)</li>
+        <li>Blood group and location (city, state, country)</li>
+        <li>Age, weight, and last donation date</li>
+        <li>Profile availability status</li>
+        <li>Organization memberships and activity</li>
+        <li>FCM token for push notifications</li>
+        <li>Google account ID (if you sign in with Google)</li>
+      </ul>
+    </div>
+
+    <div class="section">
+      <h3>3. How We Use Your Information</h3>
+      <p>Your information is used to:</p>
+      <ul class="bullets">
+        <li>Connect blood donors with recipients in need</li>
+        <li>Send emergency blood request notifications to nearby donors</li>
+        <li>Display your donor profile to people searching for blood</li>
+        <li>Manage your organization memberships and announcements</li>
+        <li>Send push notifications for blood requests and alerts</li>
+        <li>Improve app performance and user experience</li>
+      </ul>
+    </div>
+
+    <div class="section">
+      <h3>4. Information Sharing</h3>
+      <p>We do not sell your personal information to third parties. Your information may be shared in the following limited circumstances:</p>
+      <ul class="bullets">
+        <li>Your name, blood group, and location are visible to other app users when you are marked as "Available to Donate"</li>
+        <li>Your phone number is visible to others unless you enable "Hide Phone Number"</li>
+        <li>Emergency SOS alerts include your name, phone, blood group, and location to notify nearby donors</li>
+        <li>Organization members can see your profile within the organization</li>
+      </ul>
+    </div>
+
+    <div class="section">
+      <h3>5. Your Privacy Controls</h3>
+      <p>You have full control over your privacy settings within the app:</p>
+      <div class="controls-grid">
+        <div class="control-item">
+          <div class="ctrl-title">🔒 Hide Phone Number</div>
+          <div class="ctrl-desc">Shows •••••••••• instead of your number to other users</div>
+        </div>
+        <div class="control-item">
+          <div class="ctrl-title">📍 Hide City</div>
+          <div class="ctrl-desc">Shows only state and country, not your city</div>
+        </div>
+        <div class="control-item">
+          <div class="ctrl-title">💬 Hide WhatsApp</div>
+          <div class="ctrl-desc">Hides your WhatsApp number from your profile</div>
+        </div>
+        <div class="control-item">
+          <div class="ctrl-title">🔴 Availability Toggle</div>
+          <div class="ctrl-desc">Set yourself as unavailable to stop appearing in donor searches</div>
+        </div>
+        <div class="control-item">
+          <div class="ctrl-title">🗑️ Delete Account</div>
+          <div class="ctrl-desc">Permanently delete your account and all associated data</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="section">
+      <h3>6. Data Security</h3>
+      <p>We implement industry-standard security measures to protect your data:</p>
+      <ul class="bullets">
+        <li>All data is transmitted over HTTPS (encrypted)</li>
+        <li>Passwords are hashed using bcrypt — we never store plain text passwords</li>
+        <li>JWT tokens are used for secure authentication</li>
+        <li>Chat messages are not stored on our servers (relay-only system — deleted after delivery)</li>
+        <li>SOS history is automatically deleted after 2 days</li>
+      </ul>
+    </div>
+
+    <div class="section">
+      <h3>7. Data Retention</h3>
+      <p>We retain your data as long as your account is active. When you delete your account:</p>
+      <ul class="bullets">
+        <li>All your personal information is permanently deleted</li>
+        <li>Your blood request posts are removed</li>
+        <li>Your donation history is erased</li>
+        <li>You are removed from all organizations</li>
+        <li>SOS history older than 2 days is automatically deleted regardless</li>
+      </ul>
+    </div>
+
+    <div class="section">
+      <h3>8. Push Notifications</h3>
+      <p>Blood Sewa uses Firebase Cloud Messaging (FCM) to send push notifications. These include:</p>
+      <ul class="bullets">
+        <li>Emergency blood request alerts from nearby users</li>
+        <li>Organization announcements from groups you have joined</li>
+        <li>Blood post notifications for your area</li>
+      </ul>
+      <p>You can disable notifications from your device settings at any time.</p>
+    </div>
+
+    <div class="section">
+      <h3>9. Third-Party Services</h3>
+      <p>Blood Sewa uses the following third-party services:</p>
+      <ul class="bullets">
+        <li><strong>Firebase (Google)</strong> — push notifications and authentication</li>
+        <li><strong>Google Sign-In</strong> — optional login method</li>
+        <li><strong>OpenStreetMap</strong> — map display in blood request details</li>
+      </ul>
+      <p>Each of these services has their own privacy policies. We encourage you to review them.</p>
+    </div>
+
+    <div class="section">
+      <h3>10. Children's Privacy</h3>
+      <p>Blood Sewa is not intended for users under 18 years of age. We do not knowingly collect personal information from children under 18. If you are a parent or guardian and believe your child has provided us with personal information, please contact us immediately.</p>
+    </div>
+
+    <div class="section">
+      <h3>11. Your Rights</h3>
+      <p>You have the right to:</p>
+      <ul class="bullets">
+        <li>Access your personal data (view your profile in the app)</li>
+        <li>Update or correct your information (edit profile)</li>
+        <li>Delete your account and all associated data permanently</li>
+        <li>Opt out of notifications (device settings)</li>
+        <li>Control your privacy settings within the app</li>
+      </ul>
+    </div>
+
+    <div class="section">
+      <h3>12. Changes to This Policy</h3>
+      <p>We may update this Privacy Policy from time to time. We will notify you of any significant changes through the app. The "Last updated" date at the top of this page will be revised accordingly. Continued use of Blood Sewa after changes constitutes acceptance of the updated policy.</p>
+    </div>
+
+    <div class="section">
+      <h3>13. Contact Us</h3>
+      <p>If you have any questions about this Privacy Policy or how we handle your data, please contact us:</p>
+      <ul class="bullets">
+        <li><strong>App:</strong> Blood Sewa</li>
+        <li><strong>Developer:</strong> Antisoft</li>
+        <li><strong>Email:</strong> support@bloodsewa.app</li>
+        <li><strong>Play Store ID:</strong> com.antisoft.bloodsewa</li>
+      </ul>
+    </div>
+
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-logo">🩸</div>
+    <p><strong>Blood Sewa</strong> — Connecting donors &amp; recipients across India</p>
+    <p style="margin-top:8px;">
+      &copy; 2026 Antisoft. All rights reserved. &nbsp;|&nbsp;
+      <a href="mailto:support@bloodsewa.app">support@bloodsewa.app</a> &nbsp;|&nbsp;
+      <a href="account-deletion.html">Request Account Deletion</a>
+    </p>
+  </footer>
+
+</body>
+</html>
